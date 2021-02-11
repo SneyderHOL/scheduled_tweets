@@ -3,5 +3,11 @@ Rails.application.routes.draw do
   root to: "main#index"
   # GET /about
   get "about", to: "about#index"
+  # GET /sign_up
+  get "sign_up", to: "registrations#new"
+  # POST /sign_up
+  post "sign_up", to: "registrations#create"
+  # POST /logout
+  delete "logout", to: "sessions#destroy"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
