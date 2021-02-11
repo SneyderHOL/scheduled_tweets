@@ -7,7 +7,12 @@ Rails.application.routes.draw do
   get "sign_up", to: "registrations#new"
   # POST /sign_up
   post "sign_up", to: "registrations#create"
-  # POST /logout
+  # DELETE /logout
   delete "logout", to: "sessions#destroy"
+  # GET in
+  get "sign_in", to: "sessions#new"
+  # POST /sign_up
+  post "sign_in", to: "sessions#create"
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
